@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="ANICET — DAILY, application personnelle de tâches.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<title>ANICET — DAILY</title>
+</head>
+<body>
+<main class="app">
+<header class="header">
+<div><p class="eyebrow">ORGANISER • PRIORISER • AGIR</p><h1>MA JOURNÉE</h1><p id="today" class="date"></p></div>
+<button id="installBtn" class="install hidden">Installer</button>
+</header>
+<section class="progress-card"><div class="progress-top"><span>Progression</span><strong id="progressText">0%</strong></div><div class="progress-bar"><div id="progressFill"></div></div><p id="progressDetail">0 tâche terminée sur 0</p></section>
+<section class="add-box"><input id="taskInput" type="text" placeholder="Ajouter une tâche..." autocomplete="off"><button id="addBtn">+</button></section>
+<section class="categories" aria-label="Catégories">
+<button class="cat active" data-category="Toutes">Toutes</button><button class="cat" data-category="GLS">GLS</button><button class="cat" data-category="ATPAD">ATPAD</button><button class="cat" data-category="Ublot">Ublot</button><button class="cat" data-category="Personnel">Personnel</button><button class="cat" data-category="Autres">Autres</button>
+</section>
+<section><h2>MES 3 PRIORITÉS</h2><div id="priorityList" class="task-list"></div></section>
+<section><div class="section-heading"><h2>TÂCHES DU JOUR</h2><button id="clearCompleted" class="text-btn">Effacer terminées</button></div><div id="taskList" class="task-list"></div></section>
+<section class="end-day"><h2>FIN DE JOURNÉE</h2><div class="end-grid"><div><span>Accomplies</span><strong id="doneCount">0</strong></div><div><span>À reporter</span><strong id="remainingCount">0</strong></div></div></section>
+<footer><span>ANICET — DAILY</span><button id="resetAll" class="danger-btn">Réinitialiser</button></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
